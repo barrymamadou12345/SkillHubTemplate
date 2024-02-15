@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,63 +9,67 @@
   <link rel="stylesheet" href="./tailwind.css" />
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Script pour Empêcher l'inspection  -->
-    <script src="https://cdn.jsdelivr.net/gh/Cheikh-Ahmed-Tidiane-Gueye/preventActions@main/script.js">   
-    </script>
-  <!-- Script pour Empêcher l'inspection  -->
+  <!-- Script pour Empêcher l'inspection -->
+  <script src="https://cdn.jsdelivr.net/gh/Cheikh-Ahmed-Tidiane-Gueye/preventActions@main/script.js">
+  </script>
+  <!-- Script pour Empêcher l'inspection -->
   <script src="./tailwind.config.js"></script>
   <script src="https://kit.fontawesome.com/7019415cd8.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
   <section>
-        <div class="">
-          <div class=" py-4 mx-auto max-w-8xl px-8 sm:px-12 lg:px-8 xl:px-16">
-            <div class="flex flex-wrap justify-between lg:items-center">
-              <div class="relative z-30 flex w-full items-center justify-between overflow-hidden lg:w-auto">
-                <a to="/" class="flex items-center">
-                <i class="fa-regular fa-circle text-2xl me-2 text-gray-600 mt-1"></i>
-                <h1 class="font-bold text-gray-600 text-[28px]">Logo</h1>
+    <div class="">
+      <div class=" py-4 mx-auto max-w-8xl px-8 sm:px-12 lg:px-8 xl:px-16">
+        <div class="flex flex-wrap justify-between lg:items-center">
+          <div class="relative z-30 flex w-full items-center justify-between
+               overflow-hidden lg:w-auto">
+            <a to="/" class="flex items-center">
+              <i class="fa-regular fa-circle text-2xl me-2 text-gray-600 mt-1"></i>
+              <h1 class="font-bold text-gray-600 text-[28px]">Logo</h1>
+            </a>
+            <button aria-label="hamburger" id="hamburger" class="-mr-6 p-6 lg:hidden md:block">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+          <div id="navlinks"
+            class={`fixed inset-0 z-20 ${ isMenuOpen ? "bg-white/90 backdrop-blur-3xl
+             flex items-center justify-center" : "hidden bg-white/90 backdrop-blur-3xl " }
+                lg:static lg:block lg:h-auto lg:w-auto lg:bg-transparent lg:backdrop-blur-none
+                md:hidden`}>
+            <ul
+              class="max-lg:-mt-80 group flex flex-col items-center gap-6 text-lg
+               text-stone-000 dark:text-stone-300 lg:flex-row lg:gap-0 lg:text-sm">
+              <li class=" text-right transition duration-500  group-hover:text-stone-300 lg:text-left">
+                <a href="#" class="block px-6 py-1 hover:text-green-600 text-xl">
+                  About Us
                 </a>
-                <button aria-label="hamburger" id="hamburger" class="-mr-6 p-6 lg:hidden" onClick={toggleMenu}>
-                  <div aria-hidden="true" class="m-auto h-0.5 w-6 rounded bg-primary transition duration-300"></div>
-                  <div aria-hidden="true" class="m-auto mt-2 h-0.5 w-6 rounded bg-primary transition duration-300"></div>
+              </li>
+              <li class="text-right transition duration-500 group-hover:text-stone-300 lg:text-left">
+                <a href="#" class="block px-6 py-1 hover:text-green-600 text-xl">
+                  Courses
+                </a>
+              </li>
+              <li class="text-right transition duration-500 group-hover:text-stone-300 lg:text-left">
+                <a href="#" class="block px-6 py-1 hover:text-green-600 text-xl">
+                  Resources
+                </a>
+              </li>
+              <li class="text-right transition duration-500 group-hover:text-stone-300 lg:text-left">
+                <a href="#" class="block px-6 py-1 hover:text-green-600 text-xl">
+                  Online Learning
+                </a>
+              </li>
+              <li class="text-right group-hover:text-stone-300 lg:pl-6 lg:text-left">
+                <button class="px-6 pt-2 pb-3 max-lg:hidden  bg-[#21a57e] rounded-xl text-white text-xl">
+                  Log In
                 </button>
-              </div>
-              <div id="navlinks" class={`fixed inset-0 z-20 ${ isMenuOpen
-                ? "bg-white/90 backdrop-blur-3xl flex items-center justify-center" : "hidden bg-white/90 backdrop-blur-3xl " }
-                lg:static lg:block lg:h-auto lg:w-auto lg:bg-transparent lg:backdrop-blur-none`}>
-                <ul
-                  class=" max-lg:-mt-80 group flex flex-col items-center gap-6 text-lg text-stone-000 dark:text-stone-300 lg:flex-row lg:gap-0 lg:text-sm ">
-                  <li class=" text-right transition duration-500  group-hover:text-stone-300 lg:text-left">
-                    <a href="#" class="block px-6 py-1 hover:text-green-600 text-xl">
-                    About Us
-                    </a>
-                  </li>
-                  <li class="text-right transition duration-500 group-hover:text-stone-300 lg:text-left">
-                    <a href="#" class="block px-6 py-1 hover:text-green-600 text-xl">
-                    Courses
-                    </a>
-                  </li>
-                  <li class="text-right transition duration-500 group-hover:text-stone-300 lg:text-left">
-                    <a href="#" class="block px-6 py-1 hover:text-green-600 text-xl">
-                    Resources
-                    </a>
-                  </li>
-                  <li class="text-right transition duration-500 group-hover:text-stone-300 lg:text-left">
-                    <a href="#" class="block px-6 py-1 hover:text-green-600 text-xl">
-                    Online Learning
-                    </a>
-                  </li>
-                  <li class="text-right group-hover:text-stone-300 lg:pl-6 lg:text-left">
-                    <button class="px-6 pt-2 pb-3  bg-[#21a57e] rounded-xl text-white text-xl">
-                      Log In
-                    </button>
-                  </li>
-                </ul>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
+      </div>
+    </div>
 
             <div>
             
@@ -84,7 +89,10 @@
                       <div class="relative flex items-center sm:w-4/5">
                         <i class="fa-solid fa-magnifying-glass -me-8 text-xl text-gray-600"></i>
                         <input name="email" type="search" placeholder="Search course title"
-                          class="relative h-16 text-xl w-full rounded-xl border outline-blue-500 bg-transparent py-2.5 pl-10 pr-5  tracking-wide placeholder-gray-500  dark:border-gray-600 dark:placeholder-gray-200" />
+                          class="relative h-16 text-xl w-full rounded-xl 
+                          border outline-blue-500 bg-transparent py-2.5 pl-10 pr-5  
+                          tracking-wide placeholder-gray-500  dark:border-gray-600
+                           dark:placeholder-gray-200" />
                       </div>
                       <button class="px-10 -ms-8 z-10 bg-[#21a57e] rounded-lg text-white text-xl">
                         search
@@ -115,7 +123,9 @@
                         </p>
                         <div class="w-full flex mt-8 ms-4 max-sm:pe-8">
                           <button
-                            class="px-10 py-4 z-10 bg-[#21a57e] rounded-lg hover:bg-transparent hover:text-green-600 hover:border-green-400 hover:border text-white text-xl">
+                            class="px-10 py-4 z-10 bg-[#21a57e] rounded-lg 
+                            hover:bg-transparent hover:text-green-600 hover:border-green-400 
+                            hover:border text-white text-xl">
                             Explore me
                           </button>
                         </div>
@@ -194,10 +204,12 @@
                 </p>
               </div>
             
-                  <div class="mx-auto px-16 max-w-8xl mt-24 flex flex-wrap max-xl:justify-center justify-between mb-16 ">
-                    <div class="border-2 border-gray-200 rounded-xl p-8">
+                  <div class="mx-auto px-16   max-w-8xl mt-24 flex flex-wrap justify-center
+                   gap-4 mb-16 ">
+                    <div class="border-2 mb-8 border-gray-200 rounded-xl p-8">
                       <div class="">
-                        <img src='./images/img5.jpg' alt="image" class="rounded-xl w-[380px] h-[300px] max-sm:h-[240px]" />
+                        <img src='./images/img5.jpg' alt="image" class="rounded-xl
+                         w-[360px] h-[300px] max-sm:h-[240px]" />
                       </div>
                       <p class="text-2xl pt-8 font-bold text-gray-600">
                         Graphic design course
@@ -218,9 +230,10 @@
                       </div>
                     </div>
                   
-                    <div class="border-2 border-gray-200 rounded-xl p-8 max-sm:mt-6">
+                    <div class="border-2 mb-8 border-gray-200 rounded-xl p-8 max-sm:mt-6">
                       <div class="">
-                        <img src='./images/img6.jpg' alt="image" class="rounded-xl w-[380px] h-[300px] max-sm:h-[240px]" />
+                        <img src='./images/img6.jpg' alt="image" class="rounded-xl w-[360px]
+                         h-[300px] max-sm:h-[240px]" />
                       </div>
                       <p class="text-2xl pt-8 font-bold text-gray-600">
                         Illustration design course
@@ -241,9 +254,10 @@
                       </div>
                     </div>
                   
-                    <div class="border-2 border-gray-200 rounded-xl p-8 max-sm:mt-6">
+                    <div class="border-2 mb-8 border-gray-200 rounded-xl p-8 max-sm:mt-6">
                       <div class="">
-                        <img src='./images/img7.jpg' alt="image" class="rounded-xl w-[380px] h-[300px] max-sm:h-[240px]" />
+                        <img src='./images/img7.jpg' alt="image" class="rounded-xl w-[360px] 
+                        h-[300px] max-sm:h-[240px]" />
                       </div>
                       <p class="text-2xl pt-8 font-bold text-gray-600">
                         UI/UX design course
@@ -281,7 +295,10 @@
                       <div class="relative flex items-center sm:w-4/5">
                         <i class="fa-solid fa-magnifying-glass -me-8 text-xl text-gray-600"></i>
                         <input name="email" type="search" placeholder="Search course title"
-                          class="relative h-16 text-xl w-full rounded-xl border outline-blue-500 bg-transparent py-2.5 pl-10 pr-5  tracking-wide placeholder-gray-500  dark:border-gray-600 dark:placeholder-gray-200" />
+                          class="relative h-16 text-xl w-full rounded-xl
+                           border outline-blue-500 bg-transparent py-2.5 pl-10 pr-5 
+                            tracking-wide placeholder-gray-500  dark:border-gray-600
+                             dark:placeholder-gray-200" />
                       </div>
                       <button class="px-10 -ms-8 z-10 bg-[#21a57e] rounded-lg text-white text-xl">
                         Search
@@ -312,7 +329,8 @@
                           </ul>
                         </div>
                   
-                        <div class=" justify-center grid grid-cols-1 gap-24 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3">
+                        <div class=" justify-center grid grid-cols-1 gap-24 
+                        sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3">
                           <div class="mx-auto">
                             <p class="text-xl text-white font-bold">About Product</p>
                   
